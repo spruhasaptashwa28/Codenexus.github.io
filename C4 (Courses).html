@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pointers and Arrays in C | CODENEXUS</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #FFD700;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            text-shadow: 0 0 15px #FFD700;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background-color: #111;
+            border: 2px solid #FFD700;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 15px #FFD700;
+        }
+
+        .code-block {
+            background-color: #222;
+            border-left: 5px solid #FFD700;
+            padding: 15px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            color: #fff;
+        }
+
+        .highlight {
+            color: #FFA500;
+            font-weight: bold;
+        }
+
+        .try-btn {
+            display: block;
+            width: 200px;
+            margin: 15px auto;
+            text-align: center;
+            background-color: #FFD700;
+            color: #000;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #FFA500;
+        }
+
+        .try-btn:hover {
+            background-color: #FFA500;
+            box-shadow: 0 0 20px #FFD700;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pointers and Arrays in C</h1>
+
+    <div class="content">
+
+        <!-- Introduction to Pointers -->
+        <div class="section">
+            <h2>Introduction to Pointers</h2>
+            <p>
+                A <span class="highlight">pointer</span> is a variable that stores the address of another variable.
+            </p>
+            <div class="code-block">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 10;
+    int *ptr = &a; // Pointer declaration
+
+    printf("Value of a = %d\n", a);
+    printf("Address of a = %p\n", &a);
+    printf("Pointer value (ptr) = %p\n", ptr);
+    printf("Value at pointer address = %d\n", *ptr);
+
+    return 0;
+}
+            </div>
+            <a href="https://www.tutorialspoint.com/compile_c_online.php" class="try-btn">Try It Now</a>
+        </div>
+
+        <!-- Pointer Arithmetic -->
+        <div class="section">
+            <h2>Pointer Arithmetic</h2>
+            <p>
+                Pointer arithmetic allows performing operations like increment or decrement directly on pointer variables.
+            </p>
+            <div class="code-block">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int arr[3] = {10, 20, 30};
+    int *ptr = arr;
+
+    printf("Element 1: %d\n", *ptr);
+    ptr++;
+    printf("Element 2: %d\n", *ptr);
+    ptr++;
+    printf("Element 3: %d\n", *ptr);
+
+    return 0;
+}
+            </div>
+            <a href="https://www.tutorialspoint.com/compile_c_online.php" class="try-btn">Try It Now</a>
+        </div>
+
+        <!-- Pointer to Arrays -->
+        <div class="section">
+            <h2>Pointer to Arrays</h2>
+            <p>
+                A pointer can be used to access and manipulate array elements efficiently.
+            </p>
+            <div class="code-block">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int arr[5] = {1, 2, 3, 4, 5};
+    int *ptr = arr;
+
+    printf("Array Elements: ");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", *(ptr + i));
+    }
+
+    return 0;
+}
+            </div>
+            <a href="https://www.tutorialspoint.com/compile_c_online.php" class="try-btn">Try It Now</a>
+        </div>
+
+        <!-- Pointer to Pointer -->
+        <div class="section">
+            <h2>Pointer to Pointer (Double Pointer)</h2>
+            <p>
+                A <span class="highlight">pointer to pointer</span> stores the address of another pointer. 
+            </p>
+            <div class="code-block">
+#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 10;
+    int *ptr1 = &a;    // Pointer to integer
+    int **ptr2 = &ptr1; // Pointer to pointer
+
+    printf("Value of a = %d\n", a);
+    printf("Value using ptr1 = %d\n", *ptr1);
+    printf("Value using ptr2 = %d\n", **ptr2);
+
+    return 0;
+}
+            </div>
+            <a href="https://www.tutorialspoint.com/compile_c_online.php" class="try-btn">Try It Now</a>
+        </div>
+
+        <!-- Passing Pointers to Functions -->
+        <div class="section">
+            <h2>Passing Pointers to Functions</h2>
+            <p>
+                Passing a pointer to a function allows direct modification of variable values.
+            </p>
+            <div class="code-block">
+#include &lt;stdio.h&gt;
+
+void modifyValue(int *ptr) {
+    *ptr = 50;
+}
+
+int main() {
+    int num = 10;
+    printf("Before modification: %d\n", num);
+    
+    modifyValue(&num);
+    printf("After modification: %d\n", num);
+
+    return 0;
+}
+            </div>
+            <a href="https://www.tutorialspoint.com/compile_c_online.php" class="try-btn">Try It Now</a>
+        </div>
+
+        <!-- Pointer with Strings -->
+        <div class="section">
+            <h2>Pointer with Strings</h2>
+            <p>
+                Pointers simplify string handling by directly pointing to character arrays.
+            </p>
+            <div class="code-block">
+#include &lt;stdio.h&gt;
+
+int main() {
+    char str[] = "CODENEXUS";
+    char *ptr = str;
+
+    printf("String using pointer: ");
+    while (*ptr != '\0') {
+        printf("%c", *ptr);
+        ptr++;
+    }
+
+    return 0;
+}
+            </div>
+            <a href="https://www.tutorialspoint.com/compile_c_online.php" class="try-btn">Try It Now</a>
+        </div>
+
+        <!-- Final Section - Thank You Message -->
+        <div class="section">
+            <h2>Thank You!</h2>
+            <p>
+                Thank you for learning the <span class="highlight">C Programming Course</span> in <span class="highlight">CODENEXUS</span>.
+                We hope this journey enhanced your programming skills and knowledge.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+

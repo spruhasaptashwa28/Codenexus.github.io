@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Programming - CODENEXUS</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #f1c40f;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        .container {
+            padding: 40px 20px;
+        }
+
+        header {
+            background-color: #f1c40f;
+            color: #000;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0 4px 10px rgba(255, 193, 7, 0.5);
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .section {
+            background-color: #111;
+            border: 2px solid #f1c40f;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: scale(1.03);
+        }
+
+        .section h2 {
+            color: #f1c40f;
+            text-align: center;
+            text-transform: uppercase;
+            border-bottom: 2px solid #f1c40f;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li::before {
+            content: '✔';
+            margin-right: 10px;
+        }
+
+        .highlight-box {
+            background-color: #f1c40f;
+            color: #000;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .code-block {
+            background-color: #222;
+            color: #f1c40f;
+            border-left: 5px solid #f1c40f;
+            padding: 15px;
+            font-family: monospace;
+            white-space: pre-line;
+            border-radius: 8px;
+        }
+
+        .info-card {
+            background-color: #222;
+            border: 2px solid #f1c40f;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+        }
+
+        footer {
+            background-color: #f1c40f;
+            color: #000;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #f1c40f;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        C++ Programming - CODENEXUS
+    </header>
+
+    <div class="container">
+
+        <!-- Introduction -->
+        <div class="section">
+            <h2>Introduction to C++</h2>
+            <p>
+                C++ is a powerful, high-performance programming language designed for system and application development.  
+                Introduced by <b>Bjarne Stroustrup</b> in 1985, it extends the capabilities of C by adding object-oriented programming features.  
+                C++ offers a rich set of libraries, robust performance, and extensive scalability, making it ideal for both small applications  
+                and large-scale software development projects. From developing operating systems to creating interactive video games,  
+                C++ is known for its efficiency and flexibility. With its combination of procedural, object-oriented, and generic programming features,  
+                C++ provides developers with unparalleled control over hardware and software performance.  
+                Its strong type-checking mechanism ensures code safety, while its modular structure enhances reusability and scalability.  
+                Due to these capabilities, C++ remains a core language in the programming world today.
+            </p>
+        </div>
+
+        <!-- Key Features -->
+        <div class="section">
+            <h2>Key Features of C++</h2>
+            <ul>
+                <li>Combines procedural, object-oriented, and generic programming paradigms.</li>
+                <li>Fast execution speed with efficient memory management and minimal runtime overhead.</li>
+                <li>Supports powerful libraries like the *Standard Template Library (STL)* for improved functionality.</li>
+                <li>Offers robust error handling with its comprehensive exception mechanism.</li>
+                <li>High-level abstractions allow easier handling of complex data structures.</li>
+                <li>Provides excellent low-level manipulation capabilities suitable for system programming.</li>
+                <li>Enables developers to create cross-platform applications efficiently.</li>
+                <li>Supports both compiled and interpreted environments, making debugging easier.</li>
+                <li>Widely used in performance-critical applications like game engines, browsers, and financial software.</li>
+                <li>Extensive community support and vast learning resources for developers worldwide.</li>
+            </ul>
+        </div>
+
+        <!-- Advantages -->
+        <div class="section">
+            <h2>Advantages of C++</h2>
+            <ul>
+                <li>High Performance with low-level memory manipulation.</li>
+                <li>Object-Oriented Programming (OOP) enhances code reusability and maintainability.</li>
+                <li>Extensive library support simplifies development across various domains.</li>
+                <li>Flexibility in combining C-style procedural code with modern OOP techniques.</li>
+                <li>Wide compatibility with multiple hardware architectures and operating systems.</li>
+                <li>Allows dynamic memory allocation for better performance optimization.</li>
+                <li>Ideal for developing real-time applications that demand fast response rates.</li>
+                <li>Used extensively in large-scale applications, gaming engines, and system-level programs.</li>
+                <li>Provides direct access to hardware resources, making it ideal for embedded systems.</li>
+                <li>Rich ecosystem of libraries, compilers, and IDEs available for rapid development.</li>
+            </ul>
+        </div>
+
+        <!-- Sample Code -->
+        <div class="section">
+            <h2>Sample Code in C++</h2>
+            <div class="code-block">
+<pre>
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Welcome to CODENEXUS!" << endl;
+    cout << "Start mastering C++ today!" << endl;
+    return 0;
+}
+</pre>
+            </div>
+        </div>
+
+        <!-- Applications of C++ -->
+        <div class="section">
+            <h2>Applications of C++</h2>
+            <ul>
+                <li>Operating systems such as Windows, MacOS, and Linux Kernels.</li>
+                <li>Game engines like *Unreal Engine* and *Unity* for immersive 3D experiences.</li>
+                <li>Browser engines including *Mozilla Firefox* for rendering web pages.</li>
+                <li>Database management systems such as *MySQL* for high-speed data processing.</li>
+                <li>Scientific simulations, financial modeling, and banking systems.</li>
+                <li>Embedded systems for developing hardware interfaces and microcontrollers.</li>
+                <li>Automotive software for controlling vehicle systems and security protocols.</li>
+                <li>Cloud computing infrastructure that demands speed and efficiency.</li>
+                <li>Medical imaging systems that require high-precision algorithms.</li>
+                <li>AI models and neural networks with complex logic flows.</li>
+            </ul>
+        </div>
+
+        <footer>
+            &copy; 2025 CODENEXUS. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>

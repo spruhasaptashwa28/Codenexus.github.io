@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Google Sans', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000; /* Black background */
+        }
+        .login-container {
+            background: #1a1a1a; /* Dark Gray Box */
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        .login-container h2 {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .social-login {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .social-login button {
+            width: 48%;
+            padding: 10px;
+            background: #e0e0e0;
+            border: none;
+            font-size: 16px;
+    
+            cursor: pointer;
+            border-radius: 6px;
+        }
+        .or-divider {
+            color: white;
+            font-size: 14px;
+            margin: 10px 0;
+          
+        }
+        .input-box {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .input-box input {
+            width: 100%;
+            padding: 12px;
+            background: transparent;
+            border: 2px solid white;
+            outline: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: white;
+            color: black;
+            font-size: 18px;
+           
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+        .login-btn:hover {
+            background: #f1f1f1;
+        }
+        .forgot-password {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #6495ED;
+        }
+        .forgot-password a {
+            color: #6495ED;
+            text-decoration: underline;
+        }
+        .signup-link {
+            margin-top: 15px;
+            font-size: 14px;
+            color: white;
+        }
+        .signup-link a {
+            color: #ADD8E6; /* Light Blue */
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Log in with</h2>
+        <div class="social-login">
+            <button>Google</button>
+            <button>Android</button>
+        </div>
+        <p class="or-divider">or</p>
+        <div class="input-box">
+            <input type="text" placeholder="Email address" required>
+        </div>
+        <div class="input-box">
+            <input type="password" placeholder="Password" required>
+        </div>
+        <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+        <button class="login-btn">Log in</button>
+        <p class="signup-link">Don't have an account? <a href="Sign up Page.html">Sign up now</a></p>
+    </div>
+
+</body>
+</html>

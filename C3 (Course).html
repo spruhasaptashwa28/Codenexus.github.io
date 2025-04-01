@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in C | CODENEXUS</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #FFD700;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            text-shadow: 0 0 15px #FFD700;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background-color: #111;
+            border: 2px solid #FFD700;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 15px #FFD700;
+        }
+
+        .code-block {
+            background-color: #222;
+            border-left: 5px solid #FFD700;
+            padding: 15px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            color: #fff;
+        }
+
+        .highlight {
+            color: #FFA500;
+            font-weight: bold;
+        }
+
+        .try-btn {
+            display: block;
+            width: 200px;
+            margin: 15px auto;
+            text-align: center;
+            background-color: #FFD700;
+            color: #000;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #FFA500;
+        }
+
+        .try-btn:hover {
+            background-color: #FFA500;
+            box-shadow: 0 0 20px #FFD700;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Functions in C</h1>
+
+    <div class="content">
+
+        <!-- Introduction to Functions -->
+        <div class="section">
+            <h2>Introduction to Functions</h2>
+            <p>
+                A <span class="highlight">function</span> is a block of code designed to perform a specific task. 
+                Functions improve code reusability and modular programming.
+            </p>
+            <p><strong>Syntax of a Function:</strong></p>
+            <div class="code-block">
+return_type function_name(parameters) {
+    // Code block
+    return value;
+}
+            </div>
+        </div>
+
+        <!-- Built-in Functions Section -->
+        <div class="section">
+            <h2>Built-in Functions</h2>
+            <p>
+                C language provides many built-in functions such as <span class="highlight">printf()</span>, 
+                <span class="highlight">scanf()</span>, and <span class="highlight">sqrt()</span>.
+            </p>
+            <div class="code-block">
+#include &lt;stdio.h&gt;
+#include &lt;math.h&gt;
+
+int main() {
+    double result = sqrt(25);
+    printf("Square root of 25 is: %.2f\n", result);
+    return 0;
+}
+            </div>
+            <a href="https://www.tutorialspoint.com/compile_c_online.php" class="try-btn">Try It Now</a>
+        </div>
+
+        <!-- User-defined Functions Section -->
+        <div class="section">
+            <h2>User-defined Functions</h2>
+            <p>
+                User-defined functions are custom functions created by the programmer for specific tasks.
+            </p>
+            <div class="code-block">
+#include &lt;stdio.h&gt;
+
+// Function Declaration
+int add(int a, int b);
+
+int main() {
+    int x = 5, y = 10;
+    int sum = add(x, y); // Function Call
+    printf("Sum = %d\n", sum);
+    return 0;
+}
+
+// Function Definition
+int add(int a, int b) {
+    return a + b;
+}
+            </div>
+            <a href="https://www.tutorialspoint.com/compile_c_online.php" class="try-btn">Try It Now</a>
+        </div>
+
+        <!-- Recursive Functions Section -->
+        <div class="section">
+            <h2>Recursive Functions</h2>
+            <p>
+                A <span class="highlight">recursive function</span> calls itself until a termination condition is met.
+            </p>
+            <div class="code-block">
+#include &lt;stdio.h&gt;
+
+// Recursive Function for Factorial
+int factorial(int n) {
+    if (n == 0)
+        return 1;
+    else
+        return n * factorial(n - 1);
+}
+
+int main() {
+    int num = 5;
+    printf("Factorial of %d is %d\n", num, factorial(num));
+    return 0;
+}
+            </div>
+            <a href="https://www.tutorialspoint.com/compile_c_online.php" class="try-btn">Try It Now</a>
+        </div>
+
+        <!-- Function Pointers Section -->
+        <div class="section">
+            <h2>Function Pointers</h2>
+            <p>
+                A <span class="highlight">function pointer</span> stores the address of a function and allows dynamic execution.
+            </p>
+            <div class="code-block">
+#include &lt;stdio.h&gt;
+
+// Function Declaration
+void greet() {
+    printf("Hello from Function Pointer!\n");
+}
+
+int main() {
+    void (*ptr)() = greet;  // Function Pointer Declaration
+    ptr();  // Function Call via Pointer
+    return 0;
+}
+            </div>
+            <a href="https://www.tutorialspoint.com/compile_c_online.php" class="try-btn">Try It Now</a>
+        </div>
+
+        <!-- Next Section Link -->
+        <div class="section">
+            <h2>Next: Pointers and Arrays in C</h2>
+            <p>
+                Learn about <span class="highlight">Pointer Basics</span>, 
+                <span class="highlight">Pointer Arithmetic</span>, and <span class="highlight">Pointer to Arrays</span>.
+            </p>
+            <a href="C4 (Courses).html" class="try-btn">Continue to Pointers & Arrays ➔</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

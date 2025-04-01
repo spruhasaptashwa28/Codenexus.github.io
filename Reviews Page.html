@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODENEXUS Reviews</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #FFD700;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .review-section {
+            width: 90%;
+            max-width: 1000px;
+            padding: 30px;
+            border: 3px solid #FFD700;
+            border-radius: 15px;
+            box-shadow: 0 0 25px #FFD700;
+            background-color: #111;
+            overflow: hidden;
+        }
+
+        .section-heading {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #FFD700;
+            text-shadow: 0 0 15px #FFD700;
+            border-bottom: 3px solid #FFD700;
+            padding-bottom: 10px;
+        }
+
+        .review-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 10px;
+	    text-align: center;
+	    justify-content: center;
+        }
+
+        .review-box {
+            background-color: #222;
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            padding: 15px;
+            width: 48%;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s forwards;
+            box-shadow: 0 0 10px #FFD700;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .reviewer {
+            font-weight: bold;
+            color: #FFD700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .reviewer::before {
+            content: "👤";
+        }
+
+        .rating {
+            color: #FFD700;
+            margin-top: 5px;
+        }
+
+        .stars {
+            color: #FFD700;
+            font-size: 20px;
+        }
+
+        .feedback {
+            margin-top: 10px;
+            font-style: italic;
+            border-left: 4px solid #FFD700;
+            padding-left: 10px;
+        }
+
+        .form-section {
+            margin-top: 30px;
+            background-color: #222;
+            padding: 20px;
+            border: 2px solid #FFD700;
+            border-radius: 8px;
+            box-shadow: 0 0 15px #FFD700;
+        }
+
+        .form-section h2 {
+            text-align: center;
+            color: #FFD700;
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            gap: 8px;
+        }
+
+        label::before {
+            content: "✍";
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            background-color: #333;
+            border: 1px solid #FFD700;
+            color: #FFD700;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            background-color: #FFD700;
+            color: #000;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #FFA500;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .review-box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="review-section">
+        <div class="section-heading">✨ Review Section ✨</div>
+
+        <!-- Review Display Container -->
+        <div class="review-container" id="reviewContainer">
+            <div class="review-box">
+                <div class="reviewer">John Doe</div>
+                <div class="rating"><span class="stars">★★★★★</span> (5/5)</div>
+                <div class="feedback">"CODENEXUS has transformed our technical documentation! The layout is intuitive, and the black-yellow theme gives a premium feel."</div>
+            </div>
+
+            <div class="review-box">
+                <div class="reviewer">Emily Clark</div>
+                <div class="rating"><span class="stars">★★★★☆</span> (4/5)</div>
+                <div class="feedback">"The platform is feature-rich and user-friendly. A few minor bugs but overall, an excellent documentation website."</div>
+            </div>
+
+            <div class="review-box">
+                <div class="reviewer">Ananya Sharma</div>
+                <div class="rating"><span class="stars">★★★★★</span> (5/5)</div>
+                <div class="feedback">"I love the sleek black and yellow theme! CODENEXUS is perfect for managing tech documentation with style."</div>
+            </div>
+
+            <div class="review-box">
+                <div class="reviewer">Michael Brown</div>
+                <div class="rating"><span class="stars">★★★☆☆</span> (3/5)</div>
+                <div class="feedback">"The platform has potential, but more customization features would make it better. Looking forward to future updates."</div>
+            </div>
+
+            <div class="review-box">
+                <div class="reviewer">Priya Desai</div>
+                <div class="rating"><span class="stars">★★★★★</span> (5/5)</div>
+                <div class="feedback">"Excellent platform for documentation! Clean interface, powerful features, and the design looks outstanding."</div>
+            </div>
+        </div>
+
+        <!-- Review Submission Form -->
+        <div class="form-section">
+            <h2>Submit Your Review</h2>
+            <form id="reviewForm">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="rating">Rating:</label>
+                <select id="rating" required>
+                    <option value="5">★★★★★ (5/5)</option>
+                    <option value="4">★★★★☆ (4/5)</option>
+                    <option value="3">★★★☆☆ (3/5)</option>
+                    <option value="2">★★☆☆☆ (2/5)</option>
+                    <option value="1">★☆☆☆☆ (1/5)</option>
+                </select>
+
+                <label for="feedback">Your Feedback:</label>
+                <textarea id="feedback" rows="4" required></textarea>
+
+                <button type="button" class="submit-btn" onclick="addReview()">Submit Review</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function addReview() {
+            const name = document.getElementById("name").value.trim();
+            const rating = document.getElementById("rating").value;
+            const feedback = document.getElementById("feedback").value.trim();
+
+            if (name && rating && feedback) {
+                const reviewContainer = document.getElementById("reviewContainer");
+
+                const reviewBox = document.createElement("div");
+                reviewBox.classList.add("review-box");
+
+                reviewBox.innerHTML = `
+                    <div class="reviewer">${name}</div>
+                    <div class="rating">
+                        <span class="stars">${'★'.repeat(rating)}${'☆'.repeat(5 - rating)}</span> (${rating}/5)
+                    </div>
+                    <div class="feedback">${feedback}</div>
+                `;
+
+                reviewContainer.appendChild(reviewBox);
+
+                setTimeout(() => {
+                    reviewBox.style.opacity = "1";
+                    reviewBox.style.transform = "translateY(0)";
+                }, 100);
+
+                // Clear form fields
+                document.getElementById("name").value = "";
+                document.getElementById("rating").value = "5";
+                document.getElementById("feedback").value = "";
+            } else {
+                alert("Please fill in all the fields before submitting your review.");
+            }
+        }
+    </script>
+</body>
+</html>

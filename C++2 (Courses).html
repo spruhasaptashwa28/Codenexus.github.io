@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Data Structures | CODENEXUS</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #FFD700;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #111;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 3px solid #FFD700;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #111;
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #FFD700;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .title {
+            background-color: #FFD700;
+            color: #000;
+            padding: 12px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .theory, .code, .explanation, .output {
+            background-color: #222;
+            padding: 15px;
+            border-left: 5px solid #FFD700;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .code {
+            font-family: 'Courier New', monospace;
+            background-color: #1a1a1a;
+            color: #FFD700; /* Yellow-colored code text */
+            padding: 15px;
+            white-space: pre-wrap;
+            border: 2px solid #FFD700;
+        }
+
+        .output {
+            color: #00FF00;
+            border: 2px solid #FFD700;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #111;
+            border-top: 3px solid #FFD700;
+            font-size: 18px;
+        }
+
+        .nav-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .nav-link a {
+            color: #FFD700;
+            text-decoration: none;
+            background-color: #222;
+            padding: 10px 20px;
+            border: 2px solid #FFD700;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .nav-link a:hover {
+            background-color: #FFD700;
+            color: #000;
+        }
+
+        .terminal-link {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            background-color: #FFD700;
+            color: #000;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: 2px solid #FFD700;
+        }
+
+        .terminal-link:hover {
+            background-color: #000;
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        C++ Data Structures - CODENEXUS
+    </header>
+
+    <div class="container">
+
+        <!-- Stack Program -->
+        <div class="section">
+            <div class="title">Stack Implementation in C++</div>
+
+            <div class="theory">
+                <strong>Theory:</strong> A *stack* is a linear data structure that follows the *LIFO* (Last In First Out) principle. The most common operations are *push, **pop, and **display*.
+            </div>
+
+            <div class="code">
+<pre>
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    stack<int> s;
+    s.push(10);
+    s.push(20);
+    s.push(30);
+
+    cout << "Stack elements: ";
+    while (!s.empty()) {
+        cout << s.top() << " ";
+        s.pop();
+    }
+
+    return 0;
+}
+</pre>
+            </div>
+
+            <div class="output">
+                <strong>Output:</strong> Stack elements: 30 20 10
+            </div>
+
+            <div class="nav-link">
+                <a class="terminal-link" 
+                   href="https://www.onlinegdb.com/online_c++_compiler" 
+                   target="_blank">
+                   Run in Terminal
+                </a>
+            </div>
+        </div>
+
+        <!-- Queue Program -->
+        <div class="section">
+            <div class="title">Queue Implementation in C++</div>
+
+            <div class="theory">
+                <strong>Theory:</strong> A *queue* is a linear data structure that follows the *FIFO* (First In First Out) principle. Common operations are *enqueue, **dequeue, and **display*.
+            </div>
+
+            <div class="code">
+<pre>
+#include <iostream>
+#include <queue>
+using namespace std;
+
+int main() {
+    queue<int> q;
+    q.push(10);
+    q.push(20);
+    q.push(30);
+
+    cout << "Queue elements: ";
+    while (!q.empty()) {
+        cout << q.front() << " ";
+        q.pop();
+    }
+
+    return 0;
+}
+</pre>
+            </div>
+
+            <div class="output">
+                <strong>Output:</strong> Queue elements: 10 20 30
+            </div>
+
+            <div class="nav-link">
+                <a class="terminal-link" 
+                   href="https://www.onlinegdb.com/online_c++_compiler" 
+                   target="_blank">
+                   Run in Terminal
+                </a>
+            </div>
+        </div>
+
+        <!-- Binary Tree Program -->
+        <div class="section">
+            <div class="title">Binary Tree Implementation in C++</div>
+
+            <div class="theory">
+                <strong>Theory:</strong> A *binary tree* is a tree data structure in which each node has at most two children. Common traversals include *Inorder, **Preorder, and **Postorder*.
+            </div>
+
+            <div class="code">
+<pre>
+#include <iostream>
+using namespace std;
+
+struct Node {
+    int data;
+    Node* left;
+    Node* right;
+
+    Node(int val) {
+        data = val;
+        left = right = NULL;
+    }
+};
+
+void inorder(Node* root) {
+    if (root != NULL) {
+        inorder(root->left);
+        cout << root->data << " ";
+        inorder(root->right);
+    }
+}
+
+int main() {
+    Node* root = new Node(1);
+    root->left = new Node(2);
+    root->right = new Node(3);
+    cout << "Inorder Traversal: ";
+    inorder(root);
+
+    return 0;
+}
+</pre>
+            </div>
+
+            <div class="output">
+                <strong>Output:</strong> Inorder Traversal: 2 1 3
+            </div>
+
+            <div class="nav-link">
+                <a class="terminal-link" 
+                   href="https://www.onlinegdb.com/online_c++_compiler" 
+                   target="_blank">
+                   Run in Terminal
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            Thank you for learning C++ Data Structures course in CODENEXUS!
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODENEXUS - Homepage</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #FFD700;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .welcome-title {
+            font-size: 48px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #FFD700;
+            text-shadow: 0 0 15px #FFD700;
+            margin-bottom: 40px;
+        }
+
+        .course-section {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .course-card {
+            background-color: #111;
+            border: 2px solid #FFD700;
+            border-radius: 12px;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 15px #FFD700;
+            transition: transform 0.3s ease;
+        }
+
+        .course-card:hover {
+            transform: scale(1.05);
+        }
+
+        .course-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 2px solid #FFD700;
+        }
+
+        .course-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .course-description {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .learn-button {
+            background-color: #FFD700;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .learn-button:hover {
+            background-color: #FFA500;
+        }
+
+        .tutorial-box {
+            background-color: #222;
+            border: 2px solid #FFD700;
+            padding: 15px;
+            margin-top: 50px;
+            text-align: center;
+            box-shadow: 0 0 10px #FFD700;
+        }
+
+        .tutorial-box a {
+            display: inline-block;
+            background-color: #FFD700;
+            color: #000;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-title">Welcome to CODENEXUS</div>
+
+        <div class="course-section">
+            <!-- C Programming Section -->
+            <div class="course-card">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/c-programming-569564.png" alt="C Logo">
+                <div class="course-title">C Programming</div>
+                <div class="course-description">
+                    C is a powerful general-purpose programming language. It is fast, portable, and widely used in system software, game development, and embedded systems.
+                </div>
+                <a href="C Theory (Home).html" class="learn-button">Start Learning C</a>
+            </div>
+
+            <!-- C++ Programming Section -->
+            <div class="course-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/6132/6132222.png" alt="C++ Logo">
+                <div class="course-title">C++ Programming</div>
+                <div class="course-description">
+                    C++ is an extension of the C language that provides object-oriented programming features. It is used in system software, game engines, and large-scale applications.
+                </div>
+                <a href="C++ Theory (Home).html" class="learn-button">Start Learning C++</a>
+            </div>
+
+            <!-- Java Programming Section -->
+            <div class="course-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png" alt="Java Logo">
+                <div class="course-title">Java Programming</div>
+                <div class="course-description">
+                    Java is a versatile, high-level programming language designed for building cross-platform applications, including web, mobile, and enterprise software.
+                </div>
+                <a href="Java Theory (Home).html" class="learn-button">Start Learning Java</a>
+            </div>
+        </div>
+
+   
+        </div>
+    </div>
+</body>
+</html>

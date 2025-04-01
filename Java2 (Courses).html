@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Data Structures Programs | CODENEXUS</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #FFD700;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        header {
+            background-color: #111;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 28px;
+            text-transform: uppercase;
+            border-bottom: 3px solid #FFD700;
+        }
+
+        .content {
+            padding: 30px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: #111;
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #FFD700;
+        }
+
+        .program-section {
+            margin-bottom: 30px;
+        }
+
+        .program-title {
+            background-color: #FFD700;
+            color: #000;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .theory, .code, .explanation, .output {
+            background-color: #222;
+            padding: 15px;
+            border-left: 5px solid #FFD700;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .code {
+            font-family: monospace;
+            background-color: #1a1a1a;
+            color: #FFD700; /* Yellow-colored code */
+            padding: 15px;
+            white-space: pre-wrap;
+            border: 2px solid #FFD700;
+        }
+
+        .output {
+            color: #0f0;
+            border: 2px solid #FFD700;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: #111;
+            border-top: 3px solid #FFD700;
+            font-size: 18px;
+        }
+
+        .terminal-link {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            background-color: #FFD700;
+            color: #000;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: 2px solid #FFD700;
+        }
+
+        .terminal-link:hover {
+            background-color: #000;
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Java Data Structures Programs - CODENEXUS
+    </header>
+
+    <div class="content">
+
+        <!-- Arrays Program -->
+        <div class="program-section">
+            <div class="program-title">Arrays in Java</div>
+
+            <div class="theory">
+                <strong>Theory:</strong> An array is a data structure that stores multiple values of the same type in a single variable. Arrays are indexed starting from zero.
+            </div>
+
+            <div class="code">
+<pre>
+public class ArrayExample {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+
+        System.out.println("Array Elements:");
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+    }
+}
+</pre>
+            </div>
+
+            <div class="output">
+                <strong>Output:</strong>  
+                Array Elements:  
+                10  
+                20  
+                30  
+                40  
+                50  
+            </div>
+
+            <a class="terminal-link" 
+               href="https://www.onlinegdb.com/online_java_compiler" 
+               target="_blank">
+               Run in Terminal
+            </a>
+        </div>
+
+        <!-- Linked List Program -->
+        <div class="program-section">
+            <div class="program-title">Linked List in Java</div>
+
+            <div class="theory">
+                <strong>Theory:</strong> A linked list is a linear data structure consisting of nodes, where each node points to the next node in the sequence.
+            </div>
+
+            <div class="code">
+<pre>
+import java.util.LinkedList;
+
+public class LinkedListExample {
+    public static void main(String[] args) {
+        LinkedList<String> list = new LinkedList<>();
+
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+
+        System.out.println("Linked List Elements: " + list);
+    }
+}
+</pre>
+            </div>
+
+            <div class="output">
+                <strong>Output:</strong>  
+                Linked List Elements: [Apple, Banana, Cherry]
+            </div>
+
+            <a class="terminal-link" 
+               href="https://www.onlinegdb.com/online_java_compiler" 
+               target="_blank">
+               Run in Terminal
+            </a>
+        </div>
+
+        <!-- Stack Program -->
+        <div class="program-section">
+            <div class="program-title">Stack in Java</div>
+
+            <div class="theory">
+                <strong>Theory:</strong> A stack is a linear data structure that follows the *Last In First Out (LIFO)* principle. Elements are added and removed from the same end called the "top".
+            </div>
+
+            <div class="code">
+<pre>
+import java.util.Stack;
+
+public class StackExample {
+    public static void main(String[] args) {
+        Stack<Integer> stack = new Stack<>();
+
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+
+        System.out.println("Stack Elements: " + stack);
+        System.out.println("Top Element (Popped): " + stack.pop());
+        System.out.println("Stack after Pop: " + stack);
+    }
+}
+</pre>
+            </div>
+
+            <div class="output">
+                <strong>Output:</strong>  
+                Stack Elements: [10, 20, 30]  
+                Top Element (Popped): 30  
+                Stack after Pop: [10, 20]  
+            </div>
+
+            <a class="terminal-link" 
+               href="https://www.onlinegdb.com/online_java_compiler" 
+               target="_blank">
+               Run in Terminal
+            </a>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            Thank you for learning Java Data Structures course in CODENEXUS!
+        </div>
+
+    </div>
+
+</body>
+</html>

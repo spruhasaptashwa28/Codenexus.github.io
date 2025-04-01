@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Basics | CODENEXUS</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #FFD700;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #111;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 3px solid #FFD700;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #111;
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #FFD700;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .title {
+            background-color: #FFD700;
+            color: #000;
+            padding: 12px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .theory, .code, .explanation, .output {
+            background-color: #222;
+            padding: 15px;
+            border-left: 5px solid #FFD700;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .code {
+            font-family: 'Courier New', monospace;
+            background-color: #1a1a1a;
+            color: #FFD700; /* Yellow-colored code text */
+            padding: 15px;
+            white-space: pre-wrap;
+            border: 2px solid #FFD700;
+        }
+
+        .output {
+            color: #00FF00;
+            border: 2px solid #FFD700;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #111;
+            border-top: 3px solid #FFD700;
+            font-size: 18px;
+        }
+
+        .nav-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .nav-link a {
+            color: #FFD700;
+            text-decoration: none;
+            background-color: #222;
+            padding: 10px 20px;
+            border: 2px solid #FFD700;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .nav-link a:hover {
+            background-color: #FFD700;
+            color: #000;
+        }
+
+        .terminal-link {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            background-color: #FFD700;
+            color: #000;
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: 2px solid #FFD700;
+        }
+
+        .terminal-link:hover {
+            background-color: #000;
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Java Basics - CODENEXUS
+    </header>
+
+    <div class="container">
+
+        <!-- Hello World Program -->
+        <div class="section">
+            <div class="title">Hello World Program</div>
+
+            <div class="theory">
+                <strong>Theory:</strong> The "Hello World" program demonstrates the fundamental structure of a Java program. It includes a class, a main method, and a print statement.
+            </div>
+
+            <div class="code">
+<pre>
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World! Welcome to CODENEXUS.");
+    }
+}
+</pre>
+            </div>
+
+            <div class="output">
+                <strong>Output:</strong>  
+                Hello, World! Welcome to CODENEXUS.
+            </div>
+
+            <div class="nav-link">
+                <a class="terminal-link" 
+                   href="https://www.onlinegdb.com/online_java_compiler" 
+                   target="_blank">
+                   Run in Terminal
+                </a>
+            </div>
+        </div>
+
+        <!-- Variables and Data Types Program -->
+        <div class="section">
+            <div class="title">Variables and Data Types</div>
+
+            <div class="theory">
+                <strong>Theory:</strong> Java supports different types of variables, including integers, floating points, characters, and booleans. Each type is used to store specific data.
+            </div>
+
+            <div class="code">
+<pre>
+public class DataTypesExample {
+    public static void main(String[] args) {
+        int age = 25;
+        float pi = 3.14f;
+        double salary = 50000.50;
+        char grade = 'A';
+        boolean isStudent = true;
+
+        System.out.println("Age: " + age);
+        System.out.println("Value of Pi: " + pi);
+        System.out.println("Salary: " + salary);
+        System.out.println("Grade: " + grade);
+        System.out.println("Is Student: " + isStudent);
+    }
+}
+</pre>
+            </div>
+
+            <div class="output">
+                <strong>Output:</strong>  
+                Age: 25  
+                Value of Pi: 3.14  
+                Salary: 50000.5  
+                Grade: A  
+                Is Student: true  
+            </div>
+
+            <div class="nav-link">
+                <a class="terminal-link" 
+                   href="https://www.onlinegdb.com/online_java_compiler" 
+                   target="_blank">
+                   Run in Terminal
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            Thank you for learning Java Basics at CODENEXUS!
+        </div>
+
+        <!-- Navigation Link -->
+        <div class="nav-link">
+            <a href="Java2 (Courses).html">Go to Java Data Structures →</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+
+

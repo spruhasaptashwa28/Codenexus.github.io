@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming Basics | CODENEXUS</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #FFD700;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            text-shadow: 0 0 15px #FFD700;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background-color: #111;
+            border: 2px solid #FFD700;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 15px #FFD700;
+        }
+
+        .code-block {
+            background-color: #222;
+            border-left: 5px solid #FFD700;
+            padding: 15px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            color: #fff;
+        }
+
+        .highlight {
+            color: #FFA500;
+            font-weight: bold;
+        }
+
+        .try-btn {
+            display: block;
+            width: 200px;
+            margin: 15px auto;
+            text-align: center;
+            background-color: #FFD700;
+            color: #000;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #FFA500;
+        }
+
+        .try-btn:hover {
+            background-color: #FFA500;
+            box-shadow: 0 0 20px #FFD700;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #FFD700;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #222;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>C Programming Basics</h1>
+
+    <div class="content">
+
+        <!-- Introduction Section -->
+        <div class="section">
+            <h2>Introduction to C Programming</h2>
+            <p>
+                The C programming language is a powerful and widely-used language developed by 
+                <span class="highlight">Dennis Ritchie</span> in <span class="highlight">1972</span>. 
+                Known for its efficiency and flexibility, C is used for system programming, 
+                operating systems, and embedded applications.
+            </p>
+        </div>
+
+        <!-- Data Types Section -->
+        <div class="section">
+            <h2>Data Types in C</h2>
+            <table>
+                <tr>
+                    <th>Data Type</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>int</td>
+                    <td>Stores integers (whole numbers)</td>
+                    <td><code>int a = 10;</code></td>
+                </tr>
+                <tr>
+                    <td>float</td>
+                    <td>Stores floating-point numbers</td>
+                    <td><code>float pi = 3.14;</code></td>
+                </tr>
+                <tr>
+                    <td>char</td>
+                    <td>Stores single characters</td>
+                    <td><code>char grade = 'A';</code></td>
+                </tr>
+                <tr>
+                    <td>double</td>
+                    <td>Stores double-precision floating numbers</td>
+                    <td><code>double price = 99.99;</code></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Variables Section -->
+        <div class="section">
+            <h2>Variables in C</h2>
+            <p>
+                Variables are used to store data values. They can be declared and initialized as shown below:
+            </p>
+            <div class="code-block">
+#include &lt;stdio.h&gt;
+int main() {
+    int age = 21;
+    float height = 5.9;
+    char grade = 'A';
+
+    printf("Age: %d\n", age);
+    printf("Height: %.1f feet\n", height);
+    printf("Grade: %c\n", grade);
+
+    return 0;
+}
+            </div>
+            <a href="https://www.tutorialspoint.com/compile_c_online.php" class="try-btn">Try It Now</a>
+        </div>
+
+        <!-- Input/Output Section -->
+        <div class="section">
+            <h2>Input and Output in C</h2>
+            <p>
+                Use <span class="highlight">printf()</span> for displaying output and 
+                <span class="highlight">scanf()</span> for accepting user input.
+            </p>
+            <div class="code-block">
+#include &lt;stdio.h&gt;
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    printf("You entered: %d\n", num);
+
+    return 0;
+}
+            </div>
+            <a href="https://www.tutorialspoint.com/compile_c_online.php" class="try-btn">Try It Now</a>
+        </div>
+
+        <!-- Next Section Link -->
+        <div class="section">
+            <h2>Next: Control Structures in C</h2>
+            <p>
+                Learn about <span class="highlight">if-else</span>, <span class="highlight">switch-case</span>, 
+                and <span class="highlight">loops</span> with practical examples.
+            </p>
+            <a href="C2 (Courses).html" class="try-btn">Continue to Control Structures ➔</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
